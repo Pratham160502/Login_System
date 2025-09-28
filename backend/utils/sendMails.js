@@ -9,9 +9,9 @@ import transporter from '../config/emailConfig.js';
 export const sendOtpEmail = async (to, otp, name = '') => {
   try {
     const mailOptions = {
-      from: `"Crosslect Support Portal" <${process.env.EMAIL_USER}>`,
+      from: `"Testing" <${process.env.EMAIL_USER}>`,
       to,
-      subject: 'Your OTP for Crosslect Support Portal Login',
+      subject: 'Your OTP for Login',
       html: `
         <p>Hi ${name || 'User'},</p>
         <p>Your One Time Password (OTP) for login is:</p>
@@ -38,12 +38,12 @@ export const sendOtpEmail = async (to, otp, name = '') => {
 export const sendInviteEmail = async (to, name) => {
   try {
     const mailOptions = {
-      from: `"Crosslect Support Portal" <${process.env.EMAIL_USER}>`,
+      from: `"Testing" <${process.env.EMAIL_USER}>`,
       to,
-      subject: 'Invitation to join Crosslect Support Portal',
+      subject: 'Invitation to join  Portal',
       html: `
         <p>Hi ${name || 'User'},</p>
-        <p>You have been invited to join the <b>Crosslect Support Portal</b>.</p>
+        <p>You have been invited to join the <b>Test Portal</b>.</p>
         <p>Please login using your email and the OTP you receive.</p>
       `
     };
